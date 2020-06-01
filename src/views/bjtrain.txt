@@ -1,0 +1,39 @@
+北京地铁页面：
+主要引用js：
+<!-- 北京地铁api -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=BFRCXLSbf91yq03DW2EsAe1y5uTFDewG"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?type=subway&v=1.0&ak=BFRCXLSbf91yq03DW2EsAe1y5uTFDewG"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInRectangle/1.2/src/SearchInRectangle_min.js"></script>
+<script src="/static/bjSubway/svg-pan-zoom.js"></script> <!-- 这个有用 -->
+
+在 main.js 里面 ：
+    import svgJs from './utils/svg'
+    Vue.use(svgJs)
+    
+在 utils 里面：
+    添加svg.js 文件
+
+第一种方法安装相关的依赖：
+    npm install svg.draggable.js 
+    npm install svg.js 
+    npm install svg.pan-zoom.js
+    
+第二种方法：手动添加：
+在package.json 和 package-lock.json: 手动加svg相关依赖。
+    package.json：{
+
+        "svg.draggable.js": "^2.2.2",
+        "svg.pan-zoom.js": "^2.8.0",
+        "svg.select.js": "^3.0.1",
+
+        "svg.js": "^2.7.1",
+
+    }
+
+    package-lock.json：{
+        svg.draggable.js:{},
+        svg.js:{},
+        svg.pan-zoom.js:{},
+        svg.select.js:{},
+    }
+
